@@ -1,0 +1,88 @@
+/*Eliminar margin y padding */
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Body */
+body {
+  margin: 20px;
+}
+
+.container {
+  width: 90%;
+  min-height: 600px;
+  border: 3px solid grey;
+  padding: 20px;
+}
+
+/* Títol del header */
+header h1 {
+  background-color: #227C9D;
+  color: white;
+  margin: 0 0 20px 0;
+  padding: 30px 15px;
+  border: 5px dotted #FFCB77;
+}
+/* Barra de navegació */
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  padding: 15px;
+  text-decoration-line: none;
+}
+
+/* Main: Articles */
+article {
+  width: 30%;
+  display: inline-block;
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.article1 {
+  background-color: #FFCB77;
+}
+
+.article2 {
+  background-color: #17C3B2;
+}
+
+.article3 {
+  background-color: #FE6D73;
+}
+
+article h2 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+article p {
+  color: black;
+  padding: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-top: 5px solid #227C9D;
+}
