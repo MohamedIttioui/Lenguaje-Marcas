@@ -8,14 +8,18 @@
 /* Body */
 body {
   margin: 20px;
-}
-
-.container {
   width: 90%;
   min-height: 600px;
   border: 3px solid grey;
   padding: 20px;
 }
+/* 
+.container {
+  width: 90%;
+  min-height: 600px;
+  border: 3px solid grey;
+  padding: 20px;
+} */
 
 /* Títol del header */
 header h1 {
