@@ -1,0 +1,124 @@
+/* Selector universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    background-color: #1e2019;
+    color: #d3d0cb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: #d3d0cb;
+    padding: 10px;
+    display: block;
+}
+
+header img {
+    width: 250px;
+    padding: 10px;
+}
+
+header nav a {
+    color: #1e2019;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+/* Estilos del contenedor principal y del formulario */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #d3d0cb;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    padding: 1em 0;
+    background-color: #1e2019;
+    border: 1px solid #d3d0cb;
+    border-radius: 10px;
+    color: #d3d0cb;
+    text-align: center;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="email"]{
+    width: 250px;
+}
+
+textarea {
+    width: 450px;
+    height: 150px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    box-shadow:  0 0 0 0.1em #e2c044;
+    outline:none;
+}
+
+input[type="radio"]:focus, input[type="checkbox"]:focus{
+    box-shadow:  0 0 0 0.1em #587b7f;
+    outline: none;
+}
+
+h3 {
+    text-align: center;
+    color: #d3d0cb;
+    margin: 10px 0;
+}
+
+/* Consentimiento */
+div p {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin: 10px;
+}
+
+a {
+    color: #d3d0cb;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #e2c044;
+    color: #1e2019;
+    padding: 5px 15px;
+    border: 1px solid #d3d0cb;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto 0;
+}
+
+input[type="submit"]:hover {
+    opacity: 80%;
+    background-color: #e2c044d8;
+}
