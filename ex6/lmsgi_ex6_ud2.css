@@ -1,0 +1,97 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+header,
+footer {
+    background-color: #6d597a;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+aside {
+    background-color: #b56576;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: calc(50vh - 6rem); /* Ajuste de la altura para ocupar todo el espacio */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+section {
+    padding: 1rem;
+    width: calc(75% - 2rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    /* top: 0;
+    bottom: 0; */
+    text-align: center;
+}
+
+.card {
+    color: #000;
+    padding: 1rem;
+    border: 1px solid #000;
+    display: inline-block;
+    width: calc(45% - 1rem);
+    margin: 0.5rem;
+}
+
+.card:nth-child(1) {
+    background-color: #eaac8b;
+}
+
+.card:nth-child(2) {
+    background-color: #eaac8b;
+}
+
+.card:nth-child(3) {
+    background-color: #eaac8b;
+}
+
+.card:nth-child(4) {
+    background-color: #eaac8b;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
