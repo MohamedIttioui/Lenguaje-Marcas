@@ -1,9 +1,12 @@
 :root {
     --Soft-red: hsl(7, 99%, 70%);
     --Yellow: hsl(51, 100%, 49%);
-    --Dark-desaturated-cyan (graphic design text): hsl(167, 40%, 24%);
-    --Dark-blue (photography text): hsl(198, 62%, 26%);
-    --Dark-moderate-cyan (footer): hsl(168, 34%, 41%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    /* (graphic design text) */
+    --Dark-blue: hsl(198, 62%, 26%);
+    /* (photography text) */
+    --Dark-moderate-cyan: hsl(168, 34%, 41%);
+    /* (footer) */
     --cyan: #90d4c5;
 
     /* ###  Neutral colors*/
@@ -47,7 +50,6 @@ h1 {
 }
 
 /* mobile */
-
 header {
     background-image: url("/images/mobile/image-header.jpg");
     display: flex;
@@ -75,12 +77,18 @@ header section {
 }
 
 footer {
-    background-color: var();
+    background-color: var(--cyan);
+    color: var(--Dark-desaturated-cyan);
     display: flex;
+    padding: 45px 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .footer-logo{
-    mask: ;
+    background-color: var(--Dark-desaturated-cyan);
+    mask: url("./images/");
 }
 
 /* desktop */
