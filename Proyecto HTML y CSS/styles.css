@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #f3622a;
+    /* Naranja */
+    --secondary-color: #f5f3f5;
+    /* Blanco suave */
+    --accent-color: #0a91c0;
+    /* Azul */
+    --dark-color: #232323;
+    /* Casi negro */
+    --light-color: #ffffff;
+    /* Blanco */
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+/* Estilos generales para todos los dispositivos (Mobile First) */
+
+/* Selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px;
+}
+
+header img {
+    width: 250px;
+    height: auto;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+header nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Ocultar letras y mostrar solo los iconos en móvil */
+header nav ul li a span {
+    display: none;
+    /* Ocultar el texto */
+}
+
+header nav ul li a i {
+    display: inline-block;
+    /* Mostrar los iconos */
+}
+
+h1, h2{
+    font-family: Oswald;
+}
+
+.featured-articles {
+    padding: 20px;
+    text-align: center;
+}
+
+.featured-articles h1 {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.articles {
+    display: block;
+}
+
+.article-card {
+    background-color: var(--light-color);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.article-card h2 {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin: 15px 0;
+}
+
+.article-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.article-card a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.article-card a:hover {
+    background-color: #e14a19;
+    /* Naranja más oscuro */
+}
+
+footer {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+/* Media Query para dispositivos de tamaño Tablet */
+@media (min-width: 768px) {
+    header nav ul {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+
+    .featured-articles h1{
+        font-size: 28px;
+    }
+
+    .articles {
+        text-align: center;
+    }
+
+    .article-card {
+        display: inline-block;
+        width: calc(45% - 20px);
+        /* Ajusta el ancho de los artículos en tablets */
+        margin: 10px;
+        vertical-align: top;
+    }
+}
+
+/* Media Query para dispositivos de escritorio */
+@media (min-width: 1024px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header nav ul {
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 0 20px;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    header nav ul li a i {
+        display: none;
+        /* Ocultar los iconos */
+    }
+
+    header nav ul li a span {
+        display: inline-block;
+        /* Mostrar el texto */
+    }
+
+    .featured-articles h1{
+        font-size: 32px;
+    }
+
+    .articles {
+        text-align: center;
+    }
+
+    .article-card {
+        display: inline-block;
+        width: calc(33% - 20px);
+        /* Ajusta el ancho de los artículos en desktops */
+        margin: 10px;
+        vertical-align: top;
+    }
+}

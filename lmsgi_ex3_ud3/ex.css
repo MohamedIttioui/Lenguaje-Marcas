@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    text-align: center;
+    background-color: antiquewhite;
+    height: 100vh;
+    line-height: 1.6em;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 15% 10% auto 10%;
+}
+
+header{
+    background-color: aqua;
+    grid-column: 1 / 4;
+}
+
+.menu{
+    background-color: antiquewhite;
+    grid-column: 1 / 4;
+}
+
+aside{
+    background-color: yellow;
+    grid-column: 1 / 2;
+
+}
+
+main{
+    background-color: yellowgreen;
+    grid-column: 2 / 4;
+
+}
+
+footer{
+    background-color: wheat;
+    grid-column: 1 / 4;
+
+}
