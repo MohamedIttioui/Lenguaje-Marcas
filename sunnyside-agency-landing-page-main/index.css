@@ -1,0 +1,90 @@
+:root {
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan (graphic design text): hsl(167, 40%, 24%);
+    --Dark-blue (photography text): hsl(198, 62%, 26%);
+    --Dark-moderate-cyan (footer): hsl(168, 34%, 41%);
+    --cyan: #90d4c5;
+
+    /* ###  Neutral colors*/
+
+    --Verydark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url(/fonts/Barlow-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url(/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    height: 100vh;
+    font-family: Barlow;
+}
+
+h1 {
+    font-family: Fraunces;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* mobile */
+
+header {
+    background-image: url("/images/mobile/image-header.jpg");
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    background-size: cover;
+    padding: 1em;
+    color: var(--White);
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav {
+    display: none;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+footer {
+    background-color: var();
+    display: flex;
+}
+
+.footer-logo{
+    mask: ;
+}
+
+/* desktop */
+
+@media(min-width: 1440px){
+    
+}
