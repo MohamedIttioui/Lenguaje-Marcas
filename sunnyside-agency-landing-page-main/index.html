@@ -4,14 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Sunnyside agency landing page</title>
   <link rel="stylesheet" href="index.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
       font-size: 11px;
@@ -27,87 +21,78 @@
 <body>
   <header class="bg-image">
     <div>
-      <img src="./images/logo.svg" alt=" logo">
-      <nav>
-        <button>About</button>
-        <button>Services</button>
-        <button>Projects</button>
-        <button>Contact</button>
-      </nav>
-
-      <img src="./images/icon-hamburger.svg" alt="menu">
+      <img src="./images/logo.svg" alt="logo">
+      <img id="mobile-menu-btn" src="./images/icon-hamburger.svg" alt="menu">
     </div>
+    <nav id="nav-menu" class="hidden">
+      <ul>
+        <li><button>About</button></li>
+        <li><button>Services</button></li>
+        <li><button>Projects</button></li>
+        <li><button class="contact-btn">Contact</button></li>
+      </ul>
+    </nav>
     <section>
       <h1>We are creatives</h1>
-      <img src="./images/icon-arrow-down.svg" alt="arrow down">
+      <img src="images/icon-arrow-down.svg" alt="arrow down">
     </section>
   </header>
 
   <main>
-
     <section class="transform bg-image"></section>
 
     <section class="main-section-info">
-
       <h2>Transform your brand</h2>
-
-      <p>
-        We are a full-service creative agency specializing in helping brands grow fast.
-        Engage your clients through compelling visuals that do most of the marketing for you.
-      </p>
-
+      <p>We are a full-service creative agency specializing in helping brands
+        grow fast. Engage your clients through compelling visuals that do most
+        of the marketing for you.</p>
       <button>Learn more</button>
-
     </section>
 
     <section class="stand-out bg-image"></section>
 
     <section class="main-section-info">
-
       <h2>Stand out to the right audience</h2>
-
-      <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll
-        build and extend your brand in digital places.
-      </p>
-
+      <p>Using a collaborative formula of designers, researchers,
+        photographers, videographers, and copywriters, we'll build and extend
+        your brand in digital places.</p>
       <button>Learn more</button>
-
     </section>
 
     <section class="graphic-design bg-image">
-
       <h2>Graphic design</h2>
-
-      <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential
-        clients' attention.</p>
+      <p>Great design makes you memorable. We deliver artwork that underscores
+        your brand message and captures potential clients' attention.</p>
     </section>
 
     <section class="photography bg-image">
       <h2>Photography</h2>
-      <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-      </p>
+      <p>Increase your credibility by getting the most stunning, high-quality
+        photos that improve your business image.</p>
     </section>
 
     <section class="client">
-      <h3>Client Testimotionals</h3>
-
+      <h3>Client Testimonials</h3>
       <article class="emily">
         <img src="/images/image-emily.jpg" alt="emily-img">
-        <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+        <p>We put our trust in Sunnyside and they delivered, making sure our
+          needs were met and deadlines were always hit.</p>
         <h4>Emily R.</h4>
         <p>Marketing Director</p>
       </article>
 
       <article class="thomas">
         <img src="/images/image-thomas.jpg" alt="thomas-img">
-        <p>Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.</p>
+        <p>Sunnyside's enthusiasm coupled with their keen interest in our
+          brand's success made it a satisfying and enjoyable experience.</p>
         <h4>Thomas S.</h4>
         <p>Chief Operating Officer</p>
       </article>
 
       <article class="jennie">
         <img src="/images/image-jennie.jpg" alt="jennie-img">
-        <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+        <p>Incredible end result! Our sales increased over 400% when we worked
+          with Sunnyside. Highly recommended!</p>
         <h4>Jennie F.</h4>
         <p>Business Owner</p>
       </article>
@@ -115,13 +100,16 @@
 
     <section class="last-img">
       <img src="/images/mobile/image-gallery-milkbottles.jpg" alt="milkbottles">
-      <img src="/images/mobile/image-gallery-orange.jpg" alt="milkbottles">
-      <img src="/images/mobile/image-gallery-cone.jpg" alt="milkbottles">
-      <img src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="milkbottles">
-    </section>
+      <img src="/images/mobile/image-gallery-orange.jpg" alt="orange">
+      <img src="/images/mobile/image-gallery-cone.jpg" alt="cone">
+      <img src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="sugar-cubes">
 
+      <picture>
+        <source srcset="/images/mobile/image-gallery-milkbottles.jpg" media=>
+      </picture>
+    </section>
   </main>
-  
+
   <footer>
     <div class="footer-logo"></div>
     <div>
@@ -137,11 +125,13 @@
     </div>
   </footer>
 
+  <script src="index.js"></script>
 
   <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>. -->
-  </div>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name
+        Here</a>.
+    </div> -->
 </body>
 
 </html>

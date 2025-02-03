@@ -8,9 +8,7 @@
     --Dark-moderate-cyan: hsl(168, 34%, 41%);
     /* (footer) */
     --cyan: #90d4c5;
-
-    /* ###  Neutral colors*/
-
+    /* ### Neutral colors*/
     --Verydark-desaturated-blue: hsl(212, 27%, 19%);
     --Very-dark-grayish-blue: hsl(213, 9%, 39%);
     --Dark-grayish-blue: hsl(232, 10%, 55%);
@@ -68,17 +66,15 @@ p {
 
 .bg-image {
     background-size: cover;
+    background-position: center;
 }
-
-
 
 /* mobile */
 header {
     background-image: url("/images/mobile/image-header.jpg");
     display: flex;
     flex-direction: column;
-    height: 50%;
-    /* background-size: cover; */
+    height: 100vh;
     padding: 1em;
     color: var(--White);
 }
@@ -90,6 +86,70 @@ header div {
 
 header nav {
     display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#nav-menu {
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+#nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#nav-menu li {
+    padding: 15px 0;
+}
+
+#nav-menu button {
+    background: none;
+    border: none;
+    color: hsl(213, 9%, 39%);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#nav-menu .contact-btn {
+    background-color: hsl(51, 100%, 49%);
+    color: var(--Verydark-desaturated-blue);
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: Fraunces;
+}
+
+#mobile-menu-btn {
+    display: flex;
+}
+
+#nav-menu {
+    display: none;
+}
+
+#nav-menu.nav-visible {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+}
+
+.nav-visible {
+    display: flex;
 }
 
 header section {
@@ -174,7 +234,6 @@ main section {
     z-index: -1;
 }
 
-
 main section.transform+section button::after {
     background-color: var(--Yellow);
 }
@@ -218,7 +277,8 @@ article img {
     padding: 20px;
 }
 
-article h4, article p {
+article h4,
+article p {
     color: var(--Very-dark-grayish-blue);
 }
 
@@ -234,7 +294,6 @@ article h4, article p {
 }
 
 /* footer */
-
 footer {
     background-color: var(--cyan);
     color: var(--Dark-desaturated-cyan);
@@ -265,5 +324,176 @@ footer img:hover {
 }
 
 /* desktop */
+@media (min-width: 1024px) {
+    /* body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    } */
 
-@media(min-width: 1440px) {}
+    header {
+        background-image: url("/images/desktop/image-header.jpg");
+        background-size: cover;
+        height: 100vh;
+        color: var(--White);
+    }
+
+    #nav-menu {
+        background: none;
+        display: grid;
+        grid-auto-flow: row;
+        gap: 2em;
+        justify-content: end;
+        /* Asegurar que se mantenga a la derecha */
+    }
+
+    #nav-menu ul {
+        display: grid;
+        grid-auto-flow: column;
+        /* Organizar los elementos en fila */
+        gap: 2em;
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Ocultar el botón de menú hamburguesa en Desktop */
+    #mobile-menu-btn {
+        display: none;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+
+    #nav-menu button {
+        color: var(--White);
+        font-size: 1rem;
+        font-weight: 600;
+        background: none;
+        cursor: pointer;
+        border-radius: 25px;
+    }
+
+    #nav-menu button:hover {
+        color: var(--Yellow);
+    }
+
+    #nav-menu .contact-btn {
+        color: var(--Verydark-desaturated-blue);
+        background-color: var(--White);
+        text-transform: uppercase;
+        padding: 10px;
+        font-family: Fraunces;
+        border-radius: 10px;
+        border: none;
+    }
+
+    header div img[alt="menu"] {
+        display: none;
+    }
+
+    header nav {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 2em;
+    }
+
+    header h1 {
+        grid-area: title;
+        font-size: 64px;
+        padding-top: 125px;
+    }
+
+    header img[alt="arrow down"] {
+        grid-area: arrow;
+    }
+
+    main section.transform {
+        background-image: url("/images/desktop/image-transform.jpg");
+    }
+
+    main section.stand-out {
+        background-image: url("/images/desktop/image-stand-out.jpg");
+    }
+
+    main section.graphic-design {
+        background-image: url("/images/desktop/image-graphic-design.jpg");
+    }
+
+    main section.photography {
+        background-image: url("/images/desktop/image-photography.jpg");
+    }
+
+    main {
+        display: grid;
+        grid-template-areas: "text1 transform" "standout text2" "graphic-design photography" "client client";
+    }
+
+    .main-section-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .main-section-info p { text-align: start; padding: 10px 0; } 
+    .main-section-info h2 { font-size: 32px; text-align: start; } */
+    main section.transform {
+        grid-area: transform;
+    }
+
+    main section.stand-out {
+        grid-area: standout;
+    }
+
+    main section.graphic-design {
+        grid-area: graphic-design;
+    }
+
+    main section.photography {
+        grid-area: photography;
+    }
+
+    .main-section-info:nth-of-type(1) {
+        grid-area: text2;
+    }
+
+    .main-section-info:nth-of-type(2) {
+        grid-area: text1;
+    }
+
+    main section.transform,
+    main section.stand-out {
+        height: 600px;
+    }
+
+    main section.graphic-design,
+    main section.photography {
+        height: 800px;
+    }
+
+    main .client {
+        grid-area: client;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 2em;
+        padding: 4em;
+    }
+
+    main .client h3 {
+        grid-column: 1 / 4;
+    }
+
+    .last-img {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        padding: 0;
+    }
+
+    .last-img img {
+        width: 100%;
+        height: auto;
+    }
+}
