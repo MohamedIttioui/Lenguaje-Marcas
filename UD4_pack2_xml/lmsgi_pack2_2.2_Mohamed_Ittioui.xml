@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="lmsgi_pack2_2.2_Mohamed_Ittioui.dtd" type="application/xml-dtd"?>
+
+<pedido>
+    <tractor>
+        <componente nom-fabricante="Automotive" es-fragil="Sí">
+            <data-entrega any="2023" mes="10" dia="01" />
+            <peso unidad="gramos">1500</peso>
+            <num-serie>3421AB</num-serie>
+            <kmmaxims>1000</kmmaxims>
+        </componente>
+
+        <componente nom-fabricante="Fabricante Frances" es-fragil="No">
+            <data-entrega any="2024" mes="01" dia="10" />
+            <peso unidad="kilos">300</peso>
+            <num-serie>1523BA</num-serie>
+        </componente>
+
+        <componente nom-fabricante="Fabricante Chino" es-fragil="No">
+            <data-entrega any="2023" mes="12" />
+            <peso unidad="kilos">100</peso>
+            <num-serie>456CD</num-serie>
+        </componente>
+    </tractor>
+
+    <tractor>
+        <componente nom-fabricante="FabricantC" es-fragil="Sí">
+            <data-entrega any="2025" mes="03" dia="01" />
+            <peso unidad="kilos">100</peso>
+            <num-serie>LMN3456</num-serie>
+        </componente>
+
+        <componente nom-fabricante="FabricantD" es-fragil="No">
+            <data-entrega any="2025" mes="04" />
+            <peso unidad="gramos">700</peso>
+            <num-serie>EFG4321</num-serie>
+            <kmmaxims>6000</kmmaxims>
+        </componente>
+    </tractor>
+</pedido>

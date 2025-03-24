@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="lmsgi_pack2_2.2_Mohamed_Ittioui.dtd" type="application/xml-dtd"?>
+
+<pedido>
+    <tractor>
+        <componente nom-fabricante="FabricantS" es-fragil="No">
+            <data-entrega any="2023" mes="94" />
+            <peso unidad="gramos">700</peso>
+            <num-serie>SWA4321</num-serie>
+            <kmmaxims>700</kmmaxims>
+        </componente>
+    </tractor>
+</pedido>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expedients
+    xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="lmsgi_pack5_5.2_Mohamed_Ittioui.xsd">
+    <expedient>
+        <titulacio>DAM</titulacio>
+        <estudiant>Ainhoa Gárate Lizarraga</estudiant>
+        <moduls>
+            <modul nom="Sistemes informàtics" aprovat="true"
+                curs="Primer" />
+            <modul nom="Llenguatge de marques i sistemes de gestió de la informació" aprovat="true"
+                curs="Primer" />
+            <modul nom="Programació multimèdia i dispositius mòvils"
+                aprovat="false" curs="Segon" />
+        </moduls>
+    </expedient>
+    <expedient>
+        <titulacio>DAW</titulacio>
+        <estudiant>Ferran Soler Puig</estudiant>
+        <moduls>
+            <modul nom="Programació" aprovat="true" curs="Primer" />
+            <modul nom="Desenvolupament web en entorn client"
+                aprovat="false" curs="Segon" />
+            <modul nom="Desenvolupament web en entorn servidor"
+                aprovat="false" curs="Segon" />
+        </moduls>
+    </expedient>
+</expedients>

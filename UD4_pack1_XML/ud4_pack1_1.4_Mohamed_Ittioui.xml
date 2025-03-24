@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archivo>
+
+  <!-- En el segundo parrafo faltaba el &lt; y también cerrar la etiqueta imagen. Remplazar <p] por
+  <p> -->
+
+  <documento id="1">
+    <doc>
+      <p>Mi Primer <destacar importancia="1">documento XML</destacar></p>
+      <p>Comienza con la etiqueta &lt;documento &gt;</p>
+      <p>A continuacion colocamos un elemento sin contenido</p>
+      <imagen fichero="imagen.gif" />
+    </doc>
+  </documento>
+
+  <!-- El atributo nombre está duplicado; falta cerrar la etiqueta autor y por último cambiar el
+  corchete de libro por el simbolo mayor y </Libros> por </libros>. -->
+
+  <documento id="2">
+    <libros>
+      <libro id="quijote">
+        <titulo>El Quijote</titulo>
+        <autor nombre="cervantes" />
+        <descripcion>Es el mejor libro de cervantes.</descripcion>
+      </libro>
+    </libros>
+  </documento>
+
+  <!-- convertir las sioglas xml en minúsculas todas, cambiar la coma "1,0" por el punto "1.0",
+  añadir una etiqueta padre <triangulo> para contener a otras etiquetas hijas <triangulo>, añadir
+  espacio entre los atributos y cerrar las etiquetas <triangulo>. -->
+
+  <documento id="3">
+    <tringulos>
+      <triangulo base="7" altura="5" />
+      <triangulo base="2" altura="6" />
+      <triangulo base="3" altura="3" />
+    </tringulos>
+  </documento>
+
+  <!-- Todas las etiquetas deben empezar por una letra o guión bajo, por eso, reemplacé <1>, <2> y
+  <6> por una nua nueva etiqueta <numero> y añadí un nuevo atributo valor="1" etc.; el atributo
+  letra está repetido más de una vez. Así, lo reemplacé por letra1, letra2 y letra3 y por último
+  cerrar las etiquetas -->
+
+  <documento id="4">
+    <numeros>
+      <numero valor="1" letra="u" letra1="n" letra2="o">1</numero>
+      <numero valor="2" letra="d" letra1="o" letra2="s">22</numero>
+      <numero valor="6" letra="s" letra1="e" letra2="i" letra3="s">666666</numero>
+    </numeros>
+  </documento>
+
+</archivo>

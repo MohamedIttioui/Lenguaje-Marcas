@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cabecera">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="fecha">
+                                <xs:complexType>
+                                    <xs:attribute name="dia" type="xs:positiveInteger"
+                                        use="required" />
+                                    <xs:attribute name="mes" type="xs:positiveInteger"
+                                        use="required" />
+                                    <xs:attribute name="any" type="xs:positiveInteger"
+                                        use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="cliente" type="ClienteProveedor" />
+                            <xs:element name="proveedor" type="ClienteProveedor" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="linea" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="articulo">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="descripcion" type="xs:string" />
+                                        <xs:element name="precios">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="sin-IVA" type="moneda" />
+                                                    <xs:element name="con-IVA" type="moneda" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="IVA">
+                                            <xs:complexType>
+                                                <xs:attribute name="tipos-IVA" type="xs:string"
+                                                    use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="num-unidades" type="xs:integer" />
+                            <xs:element name="import-total" type="moneda" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:IDREF" use="required" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="total">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="subtotal">
+                                <xs:complexType>
+                                    <xs:attribute name="IVA-4" type="moneda" use="required" />
+                                    <xs:attribute name="IVA-10" type="moneda" use="required" />
+                                    <xs:attribute name="IVA-21" type="moneda" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="total-sin-IVA" type="moneda" />
+                            <xs:element name="total-con-IVA" type="moneda" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="moneda">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]+(\.[0-9]{1,3})? (€|$|£)"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ClienteProveedor">
+        <xs:attribute name="nom-fiscal" type="xs:string" use="required" />
+        <xs:attribute name="nom-comercial" type="xs:string" use="optional" />
+        <xs:attribute name="NIF" type="xs:string" use="required" />
+    </xs:complexType>
+
+</xs:schema>

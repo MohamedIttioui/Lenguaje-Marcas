@@ -1,0 +1,47 @@
+<!ENTITY pedido SYSTEM "lmsgi_pack4_ud4_Mohamed_Ittioui">
+
+<!ELEMENT factura (cabecera, linea+, total)>
+
+<!ELEMENT cabecera (fecha, cliente, proveedor)>
+<!ATTLIST cabecera id CDATA #REQUIRED>
+
+<!ELEMENT fecha EMPTY>
+<!ATTLIST fecha
+    dia CDATA #REQUIRED
+    mes CDATA #REQUIRED
+    any CDATA #REQUIRED>
+
+<!ELEMENT cliente EMPTY>
+<!ATTLIST cliente
+    nom-fiscal CDATA #REQUIRED
+    nom-comercial CDATA #IMPLIED
+    NIF CDATA #REQUIRED>
+
+<!ELEMENT proveedor EMPTY>
+<!ATTLIST proveedor
+    nom-fiscal CDATA #REQUIRED
+    nom-comercial CDATA #IMPLIED
+    NIF CDATA #REQUIRED>
+
+<!ELEMENT linea (articulo, num-unidades, import-total)>
+<!ELEMENT num-unidades (#PCDATA)>
+<!ELEMENT import-total (#PCDATA)>
+<!ATTLIST linea id IDREF #REQUIRED>
+
+<!ELEMENT articulo (descripcion, precios, IVA)>
+<!ATTLIST articulo id ID #REQUIRED>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT precios (sin-IVA, con-IVA)>
+<!ELEMENT sin-IVA (#PCDATA)>
+<!ELEMENT con-IVA (#PCDATA)>
+<!ELEMENT IVA EMPTY>
+<!ATTLIST IVA tipos-IVA (4 | 10 | 21) #REQUIRED>
+
+<!ELEMENT total (subtotal, total-sin-IVA, total-con-IVA)>
+<!ELEMENT subtotal EMPTY>
+<!ATTLIST subtotal
+    IVA-4 CDATA #REQUIRED
+    IVA-10 CDATA #REQUIRED
+    IVA-21 CDATA #REQUIRED>
+<!ELEMENT total-sin-IVA (#PCDATA)>
+<!ELEMENT total-con-IVA (#PCDATA)>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lista-cursos [
+<!ELEMENT lista-cursos (curso+)>
+<!ELEMENT curso (alumno+)>
+<!ELEMENT alumno (DNI, nombre, apellido, apellido-2? , lista-asignaturas)>
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT apellido-2 (#PCDATA)>
+<!ELEMENT lista-asignaturas (asignatura+)>
+<!ELEMENT asignatura (nombre , profesor)>
+<!ATTLIST asignatura codigo CDATA #REQUIRED>
+<!ELEMENT profesor (NRP, nombre, apellido, apellido-2?)>
+<!ELEMENT NRP (#PCDATA)>
+]>
+<lista-cursos>
+    <curso>
+        <alumno>
+            <DNI>54345678A</DNI>
+            <nombre>Juan</nombre>
+            <apellido>Perez</apellido>
+            <lista-asignaturas>
+                <asignatura codigo="1234">
+                    <nombre>Biología</nombre>
+                    <profesor>
+                        <NRP>1122</NRP>
+                        <nombre>Laia</nombre>
+                        <apellido>Oro</apellido>
+                    </profesor>
+                </asignatura>
+            </lista-asignaturas>
+        </alumno>
+        <alumno>
+            <DNI>33423789B</DNI>
+            <nombre>Pedro</nombre>
+            <apellido>Sánchez</apellido>
+            <apellido-2>Gómez</apellido-2>
+            <lista-asignaturas>
+                <asignatura codigo="ASD32">
+                    <nombre>Matemáticas</nombre>
+                    <profesor>
+                        <NRP>1111</NRP>
+                        <nombre>Joana</nombre>
+                        <apellido>Pons</apellido>
+                        <apellido-2>Mercadals</apellido-2>
+                    </profesor>
+                </asignatura>
+                <asignatura codigo="123WEAS">
+                    <nombre>Inglés</nombre>
+                    <profesor>
+                        <NRP>3333</NRP>
+                        <nombre>Johne</nombre>
+                        <apellido>Smith</apellido>
+                    </profesor>
+                </asignatura>
+            </lista-asignaturas>
+        </alumno>
+    </curso>
+    <curso>
+        <alumno>
+            <DNI>34543290C</DNI>
+            <nombre>Lucía</nombre>
+            <apellido>Rodríguez</apellido>
+            <lista-asignaturas>
+                <asignatura codigo="3245">
+                    <nombre>Física</nombre>
+                    <profesor>
+                        <NRP>4455</NRP>
+                        <nombre>Sebastià</nombre>
+                        <apellido>Pons</apellido>
+                        <apellido-2>Gomila</apellido-2>
+                    </profesor>
+                </asignatura>
+            </lista-asignaturas>
+        </alumno>
+    </curso>
+    <curso>
+        <alumno>
+            <DNI>34543290C</DNI>
+            <nombre>Lucía</nombre>
+            <apellido>Rodríguez</apellido>
+            <apellido-2>Pons</apellido-2>
+            <lista-asignaturas>
+                <asignatura codigo="3245">
+                    <nombre>Física</nombre>
+                    <profesor>
+                        <NRP>4455</NRP>
+                        <nombre>Sebastià</nombre>
+                        <apellido>Pons</apellido>
+                        <apellido-2>Gomila</apellido-2>
+                    </profesor>
+                </asignatura>
+            </lista-asignaturas>
+        </alumno>
+    </curso>
+</lista-cursos>

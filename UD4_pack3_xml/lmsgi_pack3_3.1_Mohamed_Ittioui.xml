@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entrega [
+<!ELEMENT entrega (lote+)>
+<!ELEMENT lote (palet+)>
+<!ELEMENT palet (numero-cajas, contenido, peso, forma-manipulacion)>
+<!ELEMENT numero-cajas (#PCDATA)>
+<!ELEMENT peso (#PCDATA)>
+<!ELEMENT forma-manipulacion (#PCDATA)>
+<!ELEMENT contenido (nom-componente, procedencia*, num-serie, peso-componente, unidad-peso?)>
+<!ELEMENT nom-componente (#PCDATA)>
+<!ELEMENT procedencia (pais*)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT num-serie (#PCDATA)>
+<!ELEMENT peso-componente (#PCDATA)>
+<!ELEMENT unidad-peso (#PCDATA)>
+]>
+<entrega>
+    <lote>
+        <palet>
+            <numero-cajas>10</numero-cajas>
+            <contenido>
+                <nom-componente>Monitor Samsung</nom-componente>
+                <procedencia>
+                    <pais>Corea Del Sur</pais>
+                </procedencia>
+                <num-serie>123ABC</num-serie>
+                <peso-componente>600</peso-componente>
+            </contenido>
+            <peso>60</peso>
+            <forma-manipulacion>Manual</forma-manipulacion>
+        </palet>
+        <palet>
+            <numero-cajas>20</numero-cajas>
+            <contenido>
+                <nom-componente>Teclado y Ratón</nom-componente>
+                <num-serie>123ABC</num-serie>
+                <peso-componente>250</peso-componente>
+            </contenido>
+            <peso>5</peso>
+            <forma-manipulacion>Manual</forma-manipulacion>
+        </palet>
+    </lote>
+    <lote>
+        <palet>
+            <numero-cajas>10</numero-cajas>
+            <contenido>
+                <nom-componente>Monitor Samsung</nom-componente>
+                <procedencia>
+                    <pais>Corea Del Sur</pais>
+                    <pais>Corea Del Norte</pais>
+                </procedencia>
+                <num-serie>123ABC</num-serie>
+                <peso-componente>0.750</peso-componente>
+                <unidad-peso>Kilos</unidad-peso>
+            </contenido>
+            <peso>60</peso>
+            <forma-manipulacion>Manual</forma-manipulacion>
+        </palet>
+        <palet>
+            <numero-cajas>20</numero-cajas>
+            <contenido>
+                <nom-componente>Teclado y Ratón</nom-componente>
+                <num-serie>123ABC</num-serie>
+                <peso-componente>2</peso-componente>
+                <unidad-peso>Gramos</unidad-peso>
+            </contenido>
+            <peso>4</peso>
+            <forma-manipulacion>Bluetooth</forma-manipulacion>
+        </palet>
+    </lote>
+    <lote>
+        <palet>
+            <numero-cajas>20</numero-cajas>
+            <contenido>
+                <nom-componente>Teclado y Ratón</nom-componente>
+                <procedencia/>
+                <num-serie>123ABC</num-serie>
+                <peso-componente>2</peso-componente>
+                <unidad-peso>Gramos</unidad-peso>
+            </contenido>
+            <peso>4</peso>
+            <forma-manipulacion>Bluetooth</forma-manipulacion>
+        </palet>
+    </lote>
+</entrega>

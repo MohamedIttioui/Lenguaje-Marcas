@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE archivo [
+    <!ELEMENT archivo (operacion+)>
+    <!ELEMENT operacion (venta | compra)+>
+    
+    <!ELEMENT venta (titulo+, CantidadTotal, entregado?, import)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT CantidadTotal (#PCDATA)>
+    <!ELEMENT entregado (#PCDATA)>
+    <!ELEMENT import (#PCDATA)>
+    <!ATTLIST import moneda CDATA #REQUIRED>
+
+    <!ELEMENT compra (titulo+, nom_provedor, fecha-compra)>
+    <!ELEMENT nom_provedor (#PCDATA)>
+    <!ELEMENT fecha-compra (dia, mes, any)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT any (#PCDATA)>
+]>
+
+<archivo>
+    <operacion>
+        <venta>
+            <titulo>El Quijote</titulo>
+            <CantidadTotal>20</CantidadTotal>
+            <entregado>No</entregado>
+            <import moneda="euros">15 €</import>
+        </venta>
+
+        <venta>
+            <titulo>El Hijo Olvidado</titulo>
+            <titulo>El libro</titulo>
+            <CantidadTotal>30</CantidadTotal>
+            <import moneda="euros">21.75 €</import>
+        </venta>
+
+        <compra>
+            <titulo>La Sangre Del Padre</titulo>
+            <nom_provedor>Alfonso Goizueta</nom_provedor>
+            <fecha-compra>
+                <dia>01</dia>
+                <mes>01</mes>
+                <any>2001</any>
+            </fecha-compra>
+        </compra>
+    </operacion>
+
+    <operacion>
+        <compra>
+            <titulo>La Sangre Del Padre</titulo>
+            <nom_provedor>Alfonso Goizueta</nom_provedor>
+            <fecha-compra>
+                <dia>01</dia>
+                <mes>01</mes>
+                <any>2001</any>
+            </fecha-compra>
+        </compra>
+
+        <venta>
+            <titulo>El Lazarillo</titulo>
+            <CantidadTotal>25</CantidadTotal>
+            <entregado>Sí</entregado>
+            <import moneda="euros">11.99 €</import>
+        </venta>
+
+        <compra>
+            <titulo>La Sangre Del Padre</titulo>
+            <titulo>Cien años de soledad</titulo>
+            <nom_provedor>Alfonso Goizueta</nom_provedor>
+            <fecha-compra>
+                <dia>01</dia>
+                <mes>01</mes>
+                <any>2001</any>
+            </fecha-compra>
+        </compra>
+    </operacion>
+</archivo>

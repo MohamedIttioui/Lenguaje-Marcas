@@ -1,0 +1,18 @@
+<!ENTITY pedido SYSTEM "lmsgi_pack2_2.2_Mohamed_Ittioui">
+
+<!ELEMENT pedido (tractor+)>
+<!ELEMENT tractor (componente+)>
+<!ELEMENT componente (data-entrega, peso, num-serie, kmmaxims?)>
+<!ATTLIST componente
+    nom-fabricante CDATA #REQUIRED
+    es-fragil (Sí | No) #REQUIRED>
+
+<!ELEMENT data-entrega EMPTY>
+<!ATTLIST data-entrega
+    any CDATA #REQUIRED
+    mes CDATA #REQUIRED
+    dia CDATA #IMPLIED>
+<!ELEMENT peso (#PCDATA)>
+<!ATTLIST peso unidad (kilos | gramos) #REQUIRED>
+<!ELEMENT num-serie (#PCDATA)>
+<!ELEMENT kmmaxims (#PCDATA)>

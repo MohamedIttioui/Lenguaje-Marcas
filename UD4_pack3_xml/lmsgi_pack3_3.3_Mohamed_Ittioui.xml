@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedido [
+<!ELEMENT pedido (libro* | cuaderno* | lapiz*)+>
+<!ELEMENT libro EMPTY>
+<!ATTLIST libro titulo CDATA #REQUIRED>
+<!ELEMENT cuaderno EMPTY>
+<!ATTLIST cuaderno num_hojas CDATA #IMPLIED>
+<!ELEMENT lapiz (numero)>
+<!ELEMENT numero (#PCDATA)>
+]>
+<pedido>
+    <libro titulo="tituloB"/>
+    <cuaderno num_hojas="100"/>
+    <lapiz>
+        <numero>3</numero>
+    </lapiz>
+    <libro titulo="tituloA"/>
+    <lapiz>
+        <numero>1</numero>
+    </lapiz>
+    <lapiz>
+        <numero>2</numero>
+    </lapiz>
+    <cuaderno/>
+    <libro titulo="Título 1"/>
+    <libro titulo="Título 2"/>
+    <libro titulo="Título 3"/>
+    <libro titulo="Título 4"/>
+    <lapiz>
+        <numero>1</numero>
+    </lapiz>
+    <lapiz>
+        <numero>2</numero>
+    </lapiz>
+    <cuaderno/>
+    <lapiz>
+        <numero>3</numero>
+    </lapiz>
+    <lapiz>
+        <numero>4</numero>
+    </lapiz>
+    <cuaderno num_hojas="200"/>
+</pedido>

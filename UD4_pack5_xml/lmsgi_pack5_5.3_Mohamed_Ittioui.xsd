@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="objectes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="objecte" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="propietari" type="xs:string" />
+                            <xs:element name="preu_sortida" type="preu" />
+                            <xs:element name="preu_minim" type="preu" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="preu">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="6" />
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

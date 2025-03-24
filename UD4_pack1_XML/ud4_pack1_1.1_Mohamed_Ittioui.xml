@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+
+  <Remitente>
+    <first-name>Alfredo</first-name>
+    <last-name>Reino</last-name>
+    <email>alf@ramis.com</email>
+  </Remitente>
+
+  <Destinatario>
+    <first-name>Bill</first-name>
+    <last-name>Clinton</last-name>
+    <email>president@whitehouse.gov</email>
+  </Destinatario>
+
+  <Asunto>Hola Bill</Asunto>
+  
+  <Texto>
+    <parrafo>Hola, cómo va?</parrafo>
+    <parrafo>Hola qué tal?</parrafo>
+    <parrafo>Hace mucho tiempo que no escribes.A ver si llamas y quedamos pronto.</parrafo>
+    <parrafo>Saludo</parrafo>
+  </Texto>
+
+</Message>

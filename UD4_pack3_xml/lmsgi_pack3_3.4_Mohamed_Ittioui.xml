@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE listado [
+<!ELEMENT listado (futur+, divisa+, bo+, lletra+)>
+
+<!ELEMENT futur (origen, producte, mercat?)>
+<!ATTLIST futur preu CDATA #REQUIRED>
+<!ELEMENT origen EMPTY>
+<!ATTLIST origen origen (Madrid|Nova-York|Frankfurt|Tòquio) #REQUIRED>
+<!ELEMENT producte (#PCDATA)>
+<!ELEMENT mercat (#PCDATA)>
+
+<!ELEMENT divisa (origen, nom, canvi+)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT canvi (#PCDATA)>
+<!ATTLIST divisa
+        preu CDATA #REQUIRED
+        estabilitat CDATA #IMPLIED>
+
+<!ELEMENT bo (origen, pais_de_procedencia, valor_desitjat, valor_minim, valor_maxim)>
+<!ELEMENT pais_de_procedencia (#PCDATA)>
+<!ELEMENT valor_desitjat (#PCDATA)>
+<!ELEMENT valor_minim (#PCDATA)>
+<!ELEMENT valor_maxim (#PCDATA)>
+<!ATTLIST bo
+        preu CDATA #REQUIRED
+        estabilitat CDATA #IMPLIED>
+
+<!ELEMENT lletra (origen, tipus_interes, pais_emissor)>
+<!ATTLIST lletra preu CDATA #REQUIRED>
+<!ELEMENT tipus_interes (#PCDATA)>
+<!ELEMENT pais_emissor (#PCDATA)>
+]>
+
+<listado>
+    <futur preu="100">
+        <origen origen="Madrid" />
+        <producte>Oro</producte>
+        <mercat>España</mercat>
+    </futur>
+    <futur preu="150">
+        <origen origen="Madrid" />
+        <producte>Acció B</producte>
+    </futur>
+    <divisa preu="1.2" estabilitat="estable">
+        <origen origen="Nova-York" />
+        <nom>Euro</nom>
+        <canvi>1.1 USD</canvi>
+    </divisa>
+    <divisa preu="1.5">
+        <origen origen="Tòquio" />
+        <nom>Yen Japonès</nom>
+        <canvi>130 JPY</canvi>
+    </divisa>
+    <bo preu="500" estabilitat="inestable">
+        <origen origen="Frankfurt" />
+        <pais_de_procedencia>Alemania</pais_de_procedencia>
+        <valor_desitjat>550</valor_desitjat>
+        <valor_minim>450</valor_minim>
+        <valor_maxim>600</valor_maxim>
+    </bo>
+    <bo preu="300">
+        <origen origen="Frankfurt" />
+        <pais_de_procedencia>Alemanya</pais_de_procedencia>
+        <valor_desitjat>350</valor_desitjat>
+        <valor_minim>290</valor_minim>
+        <valor_maxim>400</valor_maxim>
+    </bo>
+    <lletra preu="200">
+        <origen origen="Tòquio" />
+        <tipus_interes>0.05</tipus_interes>
+        <pais_emissor>Japó</pais_emissor>
+    </lletra>
+</listado>

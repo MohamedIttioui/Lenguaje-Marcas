@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="lmsgi_pack4_ud4_Mohamed_Ittioui.dtd" type="application/xml-dtd"?>
+
+<factura>
+    <cabecera id="01">
+        <fecha dia="01" mes="01" any="2001" />
+        <cliente nom-fiscal="Cliente 1" NIF="AS2134" />
+        <proveedor nom-fiscal="Proveedor 1" nom-comercial="Proveedor A" NIF="231DS" />
+    </cabecera>
+
+    <linea id="articte-ref-1">
+        <articulo id="articte-ref-1">
+            <descripcion>Una descripcion del artículo</descripcion>
+            <precios>
+                <sin-IVA>17 €</sin-IVA>
+                <con-IVA>17.68 €</con-IVA>
+            </precios>
+            <IVA tipos-IVA="4" />
+        </articulo>
+        <num-unidades>3</num-unidades>
+        <import-total>53.04 €</import-total>
+    </linea>
+
+    <total>
+        <subtotal IVA-4="26 €" IVA-10="27.5 €" IVA-21="30.25 €" />
+        <total-sin-IVA>75 €</total-sin-IVA>
+        <total-con-IVA>137.5 €</total-con-IVA>
+    </total>
+</factura>

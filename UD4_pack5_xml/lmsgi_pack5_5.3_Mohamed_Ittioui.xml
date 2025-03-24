@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objectes xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="lmsgi_pack5_5.3_Mohamed_Ittioui.xsd">
+    <objecte>
+        <propietari>Maria García</propietari>
+        <preu_sortida>1000.00</preu_sortida>
+        <preu_minim>600.00</preu_minim>
+    </objecte>
+    <objecte>
+        <propietari>Joan López</propietari>
+        <preu_sortida>2500.50</preu_sortida>
+    </objecte>
+    <objecte>
+        <propietari>Ana Ruiz</propietari>
+        <preu_sortida>9999.99</preu_sortida>
+        <preu_minim>8500.00</preu_minim>
+    </objecte>
+</objectes>
