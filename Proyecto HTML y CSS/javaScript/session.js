@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
     logoutBtn.addEventListener("click", function (event) {
       event.preventDefault(); // Evita acción por defecto (enlace)
       localStorage.removeItem("loggedInUser");
-      window.location.href = "/home.html"; // O la ruta correcta
+      window.location.href = "/home.html";
     });
   }
 
-  // Mostrar/ocultar botón Editor en home.html solo para admin
+  // Mostrar/ocultar botón Editor solo para admin
   const editorBtn = document.getElementById("editorBtn")?.parentElement;
   if (editorBtn) {
     editorBtn.style.display = user && user.type === "admin" ? "inline-block" : "none";
