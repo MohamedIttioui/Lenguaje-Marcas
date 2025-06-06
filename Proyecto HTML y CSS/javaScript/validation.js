@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var registerBtn = document.getElementById("registroBtn");
   var passwordStrength = document.getElementById("passwordStrength");
 
-  registerBtn.disabled = true; // Iniciar deshabilitado
+  //registerBtn.disabled = true; // Iniciar deshabilitado
 
   // Alternar visibilidad de contraseña
   togglePasswordBtn.addEventListener("click", function () {
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var passwordValid = passwordRegex.test(passwordInput.value) && passwordInput.value === confirmPasswordInput.value;
       var userTypeSelected = document.querySelector("input[name='user_type']:checked") !== null;
       //console.log({emailValid, passwordValid, userTypeSelected});
-      registerBtn.disabled = !(emailValid && passwordValid && userTypeSelected);
+      registerBtn.disabled = (emailValid && passwordValid && userTypeSelected);
     });
   });
 });
