@@ -14,7 +14,7 @@
                                         <xs:element name="pujada" type="xs:decimal" />
                                         <xs:element name="baixada" type="xs:decimal" />
                                     </xs:sequence>
-                                    <xs:attribute name="unitat" type="xs:string" use="required"/>
+                                    <xs:attribute name="unitat" type="xs:string" use="required" />
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="preu">
@@ -23,13 +23,10 @@
                                         <xs:element name="alta">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="permanencia_alta"
-                                                        minOccurs="0">
+                                                    <xs:element name="permanencia_alta" minOccurs="0">
                                                         <xs:complexType>
-                                                            <xs:attribute name="tiempo"
-                                                                type="xs:string" />
-                                                            <xs:attribute name="quantitat"
-                                                                type="xs:integer" />
+                                                            <xs:attribute name="tiempo" type="xs:string" />
+                                                            <xs:attribute name="quantitat" type="xs:integer" />
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
@@ -38,20 +35,17 @@
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element name="linea" type="xs:decimal" />
-                                        <xs:element name="promocio" minOccurs="0"
-                                            maxOccurs="unbounded">
+                                        <xs:element name="promocio" minOccurs="0" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="promocio_preu"
-                                                        type="xs:decimal" />
+                                                    <xs:element name="promocio_preu" type="xs:decimal" />
                                                 </xs:sequence>
                                                 <xs:attribute name="fins" type="xs:date" />
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element name="mensual" type="xs:decimal" />
                                         <xs:element name="total_mensual" type="xs:decimal" />
-                                        <xs:element name="extres" type="xs:string" minOccurs="0"
-                                            maxOccurs="unbounded" />
+                                        <xs:element name="extres" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
                                     </xs:sequence>
                                     <xs:attribute name="moneda" type="xs:string" use="required"/>
                                 </xs:complexType>

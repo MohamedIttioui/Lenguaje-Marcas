@@ -1,80 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mente Matemática</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mente Matemática</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <img src="/images/logoNuevo-Photoroom.png" alt="logo-Photoroom">
-      <nav>
-        <ul>
-          <li><a href="/home.html"><i class="fas fa-home"></i> <span class="menu-text">Inicio</span></a></li>
-          <li><a href="/views/contact.html"><i class="fas fa-envelope"></i> <span class="menu-text">Contacto</span></a></li>
-          <li><a href="/views/editor.html"><i class="fas fa-edit"></i> <span class="menu-text">Editor</span></a></li>
-          <li><a href="/views/login.html"><i class="fas fa-sign-in-alt"></i> <span class="menu-text">Login</span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="featured-articles">
-      <h1>Artículos Destacados</h1>
-      <div class="articles">
-        <!-- Artículo 1 -->
-        <article class="article-card">
-          <img src="images/pi.jpg" alt="Representación del número pi">
-          <h2>¿Por qué el número π es tan especial?</h2>
-          <p>Descubre la historia y aplicaciones de este fascinante número que aparece en geometría, física y hasta en el arte.</p>
-          <a href="views/articles/article-pi.html" class="button">Leer más</a>
-        </article>
-
-        <!-- Artículo 2 -->
-        <article class="article-card">
-          <img src="images/Numeros-primos.jpg" alt="Números primos">
-          <h2>El misterio de los números primos</h2>
-          <p>¿Sabías que los números primos son fundamentales para la criptografía moderna? Aprende más sobre su importancia.</p>
-          <a href="views/articles/article-primes.html" class="button">Leer más</a>
-        </article>
-
-        <!-- Artículo 3 -->
-        <article class="article-card">
-          <img src="images/geometria.jpg" alt="Geometría y su impacto en el arte">
-          <h2>La geometría en el arte y la arquitectura</h2>
-          <p>Descubre cómo las matemáticas han influido en algunas de las obras arquitectónicas y artísticas más importantes de la historia.</p>
-          <a href="views//articles/article-geometry.html" class="button">Leer más</a>
-        </article>
-
-        <!-- Artículo 4 -->
-        <article class="article-card">
-          <img src="images/triangulos.jpg" alt="Propiedades de los triángulos">
-          <h2>Triángulos y sus propiedades especiales</h2>
-          <p>Aprende sobre los diferentes tipos de triángulos, sus propiedades y cómo se utilizan en diversos campos como la ingeniería y la arquitectura.</p>
-          <a href="views//articles/article-triangles.html" class="button">Leer más</a>
-        </article>
-      
-        <!-- Artículo 5 -->
-        <article class="article-card">
-          <img src="images/ecuaciones.jpg" alt="Ecuaciones en matemáticas">
-          <h2>Las ecuaciones que cambiaron el mundo</h2>
-          <p>Aprende sobre las ecuaciones matemáticas más importantes y su impacto en la ciencia y la tecnología.</p>
-          <a href="views/articles/article-equations.html" class="button">Leer más</a>
-        </article>
-        
+  <body>
+    <header>
+      <div class="container">
+        <img src="/images/logoNuevo-Photoroom.png" alt="logo-Photoroom" />
+        <nav>
+          <ul>
+            <li>
+              <a href="#" id="inicioBtn">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="contactoBtn">
+                <i class="fas fa-envelope"></i>
+                <span class="menu-text">Contacto</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="editorBtn">
+                <i class="fas fa-edit"></i>
+                <span class="menu-text">Editor</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i>
+                <span class="menu-text">Login</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2024 Mente Matemática. Todos los derechos reservados.</p>
-  </footer>
-</body>
+    </header>
 
+    <main>
+      <section class="featured-articles">
+        <h1>Artículos Destacados</h1>
+        <div class="articles">
+          <!-- Artículo 1 -->
+          <article class="article-card" data-id="articulo-1">
+            <img src="images/pi.jpg" alt="Número Pi" />
+            <h2>¿Por qué el número π es tan especial?</h2>
+            <p>
+              Descubre la historia y aplicaciones de este fascinante número.
+            </p>
+            <div class="article-actions">
+              <div class="icons">
+                <button class="like-btn" data-id="articulo-1">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span id="likes-articulo-1">0</span>
+                </button>
+                <button class="comment-btn" data-id="articulo-1">
+                  <i class="fas fa-comment"></i>
+                  <span id="comments-articulo-1">0</span>
+                </button>
+                <button class="share-btn" data-id="articulo-1">
+                  <i class="fas fa-share"></i>
+                </button>
+              </div>
+              <a href="views/articles/article-pi.html" class="read-more"
+                >Leer más</a
+              >
+            </div>
+          </article>
+
+          <!-- Artículo 2 -->
+          <article class="article-card" data-id="articulo-2">
+            <img src="images/Numeros-primos.jpg" alt="Números primos" />
+            <h2>El misterio de los números primos</h2>
+            <p>Descubre su importancia en la criptografía moderna.</p>
+            <div class="article-actions">
+              <div class="icons">
+                <button class="like-btn" data-id="articulo-2">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span id="likes-articulo-2">0</span>
+                </button>
+                <button class="comment-btn" data-id="articulo-2">
+                  <i class="fas fa-comment"></i>
+                  <span id="comments-articulo-2">0</span>
+                </button>
+                <button class="share-btn" data-id="articulo-2">
+                  <i class="fas fa-share"></i>
+                </button>
+              </div>
+              <a href="views/articles/article-primes.html" class="read-more"
+                >Leer más</a
+              >
+            </div>
+          </article>
+
+          <!-- Artículo 3 -->
+          <article class="article-card" data-id="articulo-3">
+            <img src="images/geometria1.jpg" alt="Geometría y Arte" />
+            <h2>La geometría en el arte y la arquitectura</h2>
+            <p>
+              Explora cómo las matemáticas han influido en el arte y la
+              arquitectura.
+            </p>
+            <div class="article-actions">
+              <div class="icons">
+                <button class="like-btn" data-id="articulo-3">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span id="likes-articulo-3">0</span>
+                </button>
+                <button class="comment-btn" data-id="articulo-3">
+                  <i class="fas fa-comment"></i>
+                  <span id="comments-articulo-3">0</span>
+                </button>
+                <button class="share-btn" data-id="articulo-3">
+                  <i class="fas fa-share"></i>
+                </button>
+              </div>
+              <a href="views/articles/article-geometry.html" class="read-more"
+                >Leer más</a
+              >
+            </div>
+          </article>
+
+          <!-- Artículo 4 -->
+          <article class="article-card" data-id="articulo-4">
+            <img src="images/triangulos.jpg" alt="Triángulos" />
+            <h2>Triángulos y sus propiedades especiales</h2>
+            <p>Aprende sobre sus propiedades y aplicaciones en ingeniería.</p>
+            <div class="article-actions">
+              <div class="icons">
+                <button class="like-btn" data-id="articulo-4">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span id="likes-articulo-4">0</span>
+                </button>
+                <button class="comment-btn" data-id="articulo-4">
+                  <i class="fas fa-comment"></i>
+                  <span id="comments-articulo-4">0</span>
+                </button>
+                <button class="share-btn" data-id="articulo-4">
+                  <i class="fas fa-share"></i>
+                </button>
+              </div>
+              <a href="views/articles/article-triangles.html" class="read-more"
+                >Leer más</a
+              >
+            </div>
+          </article>
+
+          <!-- Artículo 5 -->
+          <article class="article-card" data-id="articulo-5">
+            <img src="images/ecuaciones.jpg" alt="Ecuaciones" />
+            <h2>Las ecuaciones que cambiaron el mundo</h2>
+            <p>Explora las ecuaciones matemáticas más influyentes.</p>
+            <div class="article-actions">
+              <div class="icons">
+                <button class="like-btn" data-id="articulo-5">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span id="likes-articulo-5">0</span>
+                </button>
+                <button class="comment-btn" data-id="articulo-5">
+                  <i class="fas fa-comment"></i>
+                  <span id="comments-articulo-5">0</span>
+                </button>
+                <button class="share-btn" data-id="articulo-5">
+                  <i class="fas fa-share"></i>
+                </button>
+              </div>
+              <a href="views/articles/article-equations.html" class="read-more"
+                >Leer más</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://www.facebook.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.instagram.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/company/mentematematica"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://www.youtube.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+      <p>&copy; 2024 Mente Matemática. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/javaScript/navigation.js"></script>
+    <script src="/javaScript/localStorage.js"></script>
+    <script src="/javaScript/home.js"></script>
+    <script src="/javaScript/likes.js"></script>
+  </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Mente Matemática</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="/images/logoNuevo-Photoroom.png" alt="logo-Photoroom" />
+      <nav>
+        <ul>
+          <li><a href="#" id="inicioBtn"><i class="fas fa-home"></i><span class="menu-text">Inicio</span></a></li>
+          <li><a href="#" id="contactoBtn"><i class="fas fa-envelope"></i><span class="menu-text">Contacto</span></a></li>
+          <li><a href="#" id="editorBtn"><i class="fas fa-edit"></i><span class="menu-text">Editor</span></a></li>
+          <li><a href="#" id="loginBtn"><i class="fas fa-sign-in-alt"></i><span class="menu-text">Login</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm" action="">
+      <p>
+        <label for="username">
+          Usuario:
+          <input type="text" id="username" name="username" required />
+        </label>
+      </p>
+      <p>
+        <label for="password">
+          Contraseña:
+          <input type="password" id="password" name="password" required />
+        </label>
+      </p>
+      <div class="button">
+        <button type="submit">Acceder</button>
+      </div>
+    </form>
+    <p>¿No tienes cuenta? <a href="/views/registrarse.html" id="registerBtn">Regístrate aquí</a></p>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/MenteMatematica" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/MenteMatematica" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/MenteMatematica" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/mentematematica" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/MenteMatematica" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2024 Mente Matemática. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="mensajeContainer"></div>
+
+  <script src="/javaScript/login.js"></script>
+  <script src="/javaScript/navigation.js"></script>
+  <script src="/javaScript/localStorage.js"></script>
+  <script src="/javaScript/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cooperativa
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:noNamespaceSchemaLocation="UD4_exercici7_Mohamed_Ittioui.xsd">
+
+  <granja>
+    <productor id="prod1">Productor1</productor>
+    <productor id="prod2">Productor2</productor>
+    <animales>
+      <gato decompania="true">Un gato</gato>
+      <gato decompania="true">Otro gato</gato>
+      <cerdo cantidad="5" />
+    </animales>
+  </granja>
+  <granja>
+    <productor id="prod3">Productor3</productor>
+    <animales>
+      <perro decompania="true">Un perro</perro>
+      <cerdo />
+    </animales>
+  </granja>
+  <granja>
+    <productor id="prod4">Productor4</productor>
+    <productor id="prod5">Productor5</productor>
+    <animales>
+      <gato decompania="true">Un gato</gato>
+      <gato decompania="false">Otro gato</gato>
+      <cerdo />
+    </animales>
+  </granja>
+</cooperativa>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - Mente Matemática</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/css/registrarse.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <img src="/images/logoNuevo-Photoroom.png" alt="logo-Photoroom" />
+        <nav>
+          <ul>
+            <li>
+              <a href="#" id="inicioBtn">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="contactoBtn">
+                <i class="fas fa-envelope"></i>
+                <span class="menu-text">Contacto</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="editorBtn">
+                <i class="fas fa-edit"></i>
+                <span class="menu-text">Editor</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i>
+                <span class="menu-text">Login</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="mensajeCentral" style="display: none">
+      <div id="mensajeCentralContenido"></div>
+    </div>
+
+    <div class="register-container">
+      <h2>Registrarse</h2>
+      <form action="" method="post">
+        <p>
+          <label for="nom">
+            Nombre:
+            <input type="text" id="nom" name="nom" required />
+          </label>
+          <label for="apellidos">
+            Apellidos:
+            <input type="text" id="apellidos" name="apellidos" required />
+          </label>
+        </p>
+        <p>
+          <label for="email">
+            Correo Electrónico:
+            <input type="email" id="email" name="email" required />
+          </label>
+          <label for="confirmEmail">
+            Confirmar Correo Electrónico:
+            <input
+              type="email"
+              id="confirmEmail"
+              name="confirmEmail"
+              required
+            />
+          </label>
+        </p>
+        <p>
+          <label for="password">
+            Contraseña:
+            <div class="password-container">
+              <input type="password" id="password" name="password" required />
+              <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+            <div class="password-strength-container">
+              <div id="passwordStrength"></div>
+            </div>
+          </label>
+          <label for="confirm-password">
+            Confirmar Contraseña:
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </label>
+        </p>
+
+        <h3>Selecciona el tipo de usuario:</h3>
+        <p>
+          <label for="admin">
+            <input
+              type="radio"
+              id="admin"
+              name="user_type"
+              value="admin"
+              required
+            />
+            Administrador
+          </label>
+
+          <label for="user">
+            <input
+              type="radio"
+              id="user"
+              name="user_type"
+              value="user"
+              required
+            />
+            Usuario
+          </label>
+        </p>
+
+        <p><b>Condiciones generales:</b></p>
+        <p>
+          <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required />
+            Acepto los términos y condiciones.
+          </label>
+        </p>
+        <p>
+          <label for="subscribe">
+            <input type="checkbox" id="subscribe" name="subscribe" />
+            Quiero recibir novedades y actualizaciones.
+          </label>
+        </p>
+
+        <div class="button">
+          <button id="registroBtn" type="submit">Registrarse</button>
+        </div>
+      </form>
+      <p>
+        ¿Ya tienes una cuenta?
+        <a href="login.html" id="loginBtn">Inicia sesión aquí</a>
+      </p>
+    </div>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://www.facebook.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.instagram.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/company/mentematematica"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://www.youtube.com/MenteMatematica" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+      <p>&copy; 2024 Mente Matemática. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/javaScript/navigation.js"></script>
+    <script src="/javaScript/registrarse.js"></script>
+    <script src="/javaScript/validation.js"></script>
+    <script src="/javaScript/localStorage.js"></script>
+    <script src="/javaScript/home.js"></script>
+  </body>
+</html>

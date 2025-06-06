@@ -1,0 +1,16 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cooperativa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="acontecemiento" type="data-aconte" minOccurs="0" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="data-aconte">
+        <xs:attribute name="data" type="data-a" use="optional" />
+    </xs:complexType>
+    <xs:simpleType name="data-a">
+        <xs:restriction  base="xs:date" />
+    </xs:simpleType>
+</xs:schema>
