@@ -70,7 +70,7 @@ function toggleLike(articleId) {
     userLikes[userId].push(articleId);
     likes[articleId] = (likes[articleId] || 0) + 1;
   }
-
+  
   guardarUserLikes(userLikes);
   guardarLikes(likes);
   actualizarContadorLikes(articleId);

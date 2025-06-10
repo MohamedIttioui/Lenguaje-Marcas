@@ -126,12 +126,13 @@ document.addEventListener("DOMContentLoaded", function () {
       email: inputEmail.value.trim(),
       password: btoa(inputPassword.value.trim()),
       type: inputUserType.value,
+      id: Date.now().toString() // ID único
     };
 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    mostrarMensajeCentral("Registro exitoso.", 1500);
+    mostrarMensajeCentral("Registro exitoso.", 2000);
 
     setTimeout(() => {
       const destino = newUser.type === "admin" ? "/views/editor.html" : "/home.html";

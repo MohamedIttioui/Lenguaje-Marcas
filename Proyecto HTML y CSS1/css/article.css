@@ -1,0 +1,112 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Importación de los estilos comunes */
+@import url('styles.css');
+
+/* Estilos específicos para la página de detalle de artículo */
+.article-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.article-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.article-header img {
+  flex: 1 1 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.article-header .text-inline {
+  flex: 2 1 300px;
+  padding: 0 20px;
+}
+
+.article-header p,
+.article-body p {
+  font-size: 16px;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.article-body {
+  width: 100%;
+}
+
+.article-body p {
+  font-size: 16px;
+}
+
+/* Media Query para dispositivos de tamaño Tablet */
+@media (min-width: 768px) {
+  .article-detail {
+    padding: 40px;
+  }
+
+  .article-detail h1 {
+    font-size: 28px;
+  }
+
+  .article-header .text-inline,
+  .article-header img,
+  .article-body {
+    max-width: 80%;
+  }
+
+  .article-body p {
+    font-size: 18px;
+  }
+}
+
+/* Media Query para dispositivos de escritorio */
+@media (min-width: 1024px) {
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .article-detail {
+    flex: 1 1 1200px;
+  }
+
+  .article-detail h1 {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .article-header img {
+    margin: 20px;
+  }
+
+  .article-header .text-inline {
+    flex: 1 1 50%;
+    font-size: 20px;
+  }
+
+  .article-body {
+    flex: 1 1 100%;
+  }
+
+  .article-body p {
+    font-size: 20px;
+  }
+}
